@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sari-Sari Store IMS - Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f0f2f5;
+      color: #333;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dashboard-layout {
+      display: flex;
+      width: 90%;
+      height: 90vh;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background: #dff4ff;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+    }
+
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      padding: 15px 25px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .nav-item:hover {
+      background: #b8e6f9;
+    }
+
+    .nav-item.active {
+      background: #3cdfff;
+      color: #000;
+      font-weight: 600;
+    }
+
+    .nav-item .icon {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 30px 40px;
+      background: #fafafa;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .main-header h1 {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .store-icon-container {
+      background-color: #a5ecff;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    .store-icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    /* Metrics */
+    .metrics-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .metric-card {
+      flex: 1;
+      background: #dff0ff;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-title {
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .card-value {
+      font-size: 36px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active"><i class="icon fas fa-home"></i>Dashboard</a>
+        <a href="#" class="nav-item"><i class="icon fas fa-box"></i>Inventory</a>
+        <a href="#" class="nav-item"><i class="icon fas fa-shopping-cart"></i>Sales</a>
+        <a href="#" class="nav-item"><i class="icon fas fa-chart-bar"></i>Reports</a>
+        <a href="#" class="nav-item"><i class="icon fas fa-user-cog"></i>User Settings</a>
+        <a href="#" class="nav-item"><i class="icon fas fa-sign-out-alt"></i>Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <h1>Sari-Sari Store Inventory Management System</h1>
+        <div class="store-icon-container">
+          <img src="store-icon.png" alt="Store Icon" class="store-icon">
+        </div>
+      </header>
+
+      <div class="metrics-container">
+        <div class="metric-card">
+          <span class="card-title">Total Products</span>
+          <span class="card-value">120</span>
+        </div>
+        <div class="metric-card">
+          <span class="card-title">Low Stock Items</span>
+          <span class="card-value">15</span>
+        </div>
+        <div class="metric-card">
+          <span class="card-title">Total Sales Today</span>
+          <span class="card-value">₱10,000</span>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
